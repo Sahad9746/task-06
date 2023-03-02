@@ -90,35 +90,60 @@ function SideBar() {
      </DivTop>
      <DivCenter>
       <Ul>
-        <Li>
+        <Li >
           <LeftImage>
             <Imageleft src={dashboard}/>
           </LeftImage>
-          <H2>Dashboard</H2>
+          <Item
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/"
+            >
+              Dashboard
+            </Item>
         </Li>
         <Li>
           <LeftImage>
             <Imageleft src={card}/>
           </LeftImage>
-          <H2>My Cards</H2>
+          <Item
+              // className={({ isActive }) => (isActive ? "active" : "")}
+              to="/mycards"
+            >
+              Mycards
+            </Item>
         </Li>
         <Li>
           <LeftImage>
             <Imageleft src={lock}/>
           </LeftImage>
-          <H2>Saving</H2>
+          <Item
+              // className={({ isActive }) => (isActive ? "active" : "")}
+              to="/saving"
+            >
+              Saving
+            </Item>
         </Li>
         <Li>
           <LeftImage>
             <Imageleft src={transaction}/>
           </LeftImage>
-          <H2>Transaction</H2>
+          <Item
+              // className={({ isActive }) => (isActive ? "active" : "")}
+              to="/settings"
+            >
+              Settings
+            </Item>
         </Li>
         <Li>
           <LeftImage>
             <Imageleft src={gear}/>
           </LeftImage>
-          <H2>Settings</H2>
+          <Item
+              // className={({ isActive }) => (isActive ? "active" : "")}
+              to="/transaction"
+            >
+              Transaction
+            </Item>
         </Li>
       </Ul>
      </DivCenter>
@@ -168,6 +193,11 @@ const Li =styled.li`
     margin-bottom: 0;
   }
 `
+const Item = styled(NavLink)`
+  /* font-size: 18px;
+  color: gray;
+  font-weight: 500; */
+`
 const LeftImage = styled.div`
   margin-right: 18px;
 `;
@@ -202,7 +232,9 @@ const H3 = styled.h4`
   width: 20%;
 `;
 
-const ItemImage = styled(NavLink)`
+const ItemImage = styled(NavLink)
+`
+
 `
 const Img =styled.img`
   width: 100%;

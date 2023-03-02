@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import styled from "styled-components"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/screens/Dashboard';
@@ -11,23 +12,23 @@ import Transaction from './components/screens/Transaction';
 
 
 function App() {
-  // return (
-  //   <Container>
-  //     <Router>
-      return  <SideBar/>
-  //       <Routes>
-  //         <Route path=''element={<Dashboard/>} />
-  //         <Route path='mycards' element={<Mycards/>}/>
-  //         <Route path='saving' element={<Saving/>}/>
-  //         <Route path='settings' element={<Settings/>}/>
-  //         <Route path='transaction' element={<Transaction/>}/>
+  return (
+    <Container>
+      <Router>
+        <SideBar/>
+        <Routes>
+          <Route path='/'element={<Dashboard/>} />
+          <Route path='mycards' element={<Mycards/>}/>
+          <Route path='saving' element={<Saving/>}/>
+          <Route path='settings' element={<Settings/>}/>
+          <Route path='transaction' element={<Transaction/>}/>
 
-  //       </Routes>
-  //       <RightBar/>
-  //     </Router>
+        </Routes>
+        <RightBar/>
+      </Router>
 
-  //   </Container>
-  // )
+    </Container>
+  )
 }
 
 export default App
