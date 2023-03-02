@@ -10,6 +10,6 @@ dfjdlkf
 }
 
 const Container = styled.div`
-  width: 20%;
+  width: 05%;
   background-color: #000;
 `

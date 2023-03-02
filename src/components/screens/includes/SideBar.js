@@ -164,18 +164,19 @@ function SideBar() {
 export default SideBar;
 const MainContainer = styled.section`
   width: 25%;
-  padding: 24px;
+  padding: 24px 35px 24px 70px;
   background: #f6f6f6;
 `;
 const DivTop =styled.div`
-  padding: 0 0 50px 0;
+  padding: 0 0 80px 0;
 `
 const DivLogo =styled.div`
   max-width: 70px;
 `
 const DivCenter =styled.div`
   border-bottom: 1px solid #000;
-  padding: 0 0 40px 0;
+  padding: 0 0 283px 0;
+
 `
 const A =styled.a`
   display: block;
@@ -194,9 +195,9 @@ const Li =styled.li`
   }
 `
 const Item = styled(NavLink)`
-  /* font-size: 18px;
+  font-size: 18px;
   color: gray;
-  font-weight: 500; */
+  font-weight: 550;
 `
 const LeftImage = styled.div`
   margin-right: 18px;
@@ -218,6 +219,7 @@ const DivBottom = styled.div`
   justify-content: space-between;
   width: 75%;
   margin: 0 auto;
+  padding: 20px 0;
 `;
 const LeftDiv = styled.div`
   max-width: 50px;
