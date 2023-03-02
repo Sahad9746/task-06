@@ -1,21 +1,26 @@
-import "./App.css";
-import Dashboard from "./components/screens/Dashboard";
-import Mycards from "./components/screens/Mycards";
-import Saving from "./components/screens/Saving";
-import Settings from "./components/screens/Settings";
-import Transaction from "./components/screens/Transaction";
+import React from 'react'
+import styled from "styled-components"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './components/screens/Dashboard';
+
 
 function App() {
   return (
-    <>
-    <Dashboard/>
-    <Mycards/>
-    <Saving/>
-    <Settings/>
-    <Transaction/>
-    
-    </>
-  );
+    <Container>
+      <Router>
+        <Routes>
+          <Route path=''element={<Dashboard/>} />
+        </Routes>
+      </Router>
+
+    </Container>
+  )
 }
 
-export default App;
+export default App
+
+const Container =styled.div`
+
+  
+
+`

@@ -1,0 +1,18 @@
+Font Family :IBM Plex Sans
+link:https://fonts.google.com/specimen/IBM+Plex+Sans+Thai+Looped
+
+Font Size - 
+H1 :40px
+H2 :32px
+H3 :28px
+H4 :24px
+H5 :20px
+
+Colours -
+Black:FEC0A7
+Grey:747474
+card-1 :FEC0A7
+card-2 :98BDE5
+card-3 :98DBE5
+
+
