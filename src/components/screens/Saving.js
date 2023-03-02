@@ -1,7 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export default function Saving() {
   return (
-    <div>Saving</div>
+    <Container>
+
+    </Container>
   )
 }
+const Container =styled.div`
+ width:  49%;
+`
