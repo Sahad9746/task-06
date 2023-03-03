@@ -9,5 +9,5 @@ export default function Mycards() {
   )
 }
 const Container = styled.div`
- width: 49%;
+ width: 74%;
 `

@@ -164,18 +164,22 @@ function SideBar() {
 export default SideBar;
 const MainContainer = styled.section`
   width: 25%;
-  padding: 24px 35px 24px 70px;
+  height: 100vh;
+  padding: 45px 50px 55px 70px;
   background: #f6f6f6;
 `;
 const DivTop =styled.div`
   padding: 0 0 80px 0;
 `
 const DivLogo =styled.div`
-  max-width: 70px;
+  max-width: 85px;
 `
 const DivCenter =styled.div`
-  border-bottom: 1px solid #000;
-  padding: 0 0 283px 0;
+    width: 80%;
+    height: 73%;
+
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(0, 0, 0);
 
 `
 const A =styled.a`
@@ -189,13 +193,13 @@ const Ul =styled.ul``;
 const Li =styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
   :last-child {
     margin-bottom: 0;
   }
 `
 const Item = styled(NavLink)`
-  font-size: 18px;
+  font-size: 25px;
   color: gray;
   font-weight: 550;
 `
@@ -208,7 +212,7 @@ const Imageleft = styled.img`
   filter: invert(56%) sepia(0%) saturate(57%) hue-rotate(135deg) brightness(89%) contrast(86%);
 `;
 const H2 = styled.h2`
-  font-size: 18px;
+  font-size: 25px;
   color: gray;
   font-weight: 500;
 `;

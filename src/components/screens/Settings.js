@@ -7,5 +7,5 @@ export default function Settings() {
   )
 }
 const  Container =styled.div`
-width: 49%;
+width: 74%;
 ` 

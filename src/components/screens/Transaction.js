@@ -10,5 +10,5 @@ export default function Transaction() {
 }
 const Container =styled.div`
 
-width: 49%;
+width: 74%;
 `
