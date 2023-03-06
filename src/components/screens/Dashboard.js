@@ -73,6 +73,7 @@ export default function Dashboard() {
           </SecondDivision>
         </SecondContainer>
         {/* Saving ssection end here */}
+        {/* Statistics section start here */}
         <StatiStics>
                 <TopContainer>
                     <HeadingStatic>Statistics</HeadingStatic>
@@ -88,10 +89,13 @@ export default function Dashboard() {
                         <UpArrow>
                             <UpImage src={uper} alt="uparrow" />
                         </UpArrow>
-                        <Incom>Total income $235</Incom>
-                        <ColorBlue></ColorBlue>
+                        <Totel>  
+                        <Incom>Total income</Incom>
+                        <Price> $235</Price>
+                        </Totel>
                         <BackGroundImg>
-                            <GraphImg src={linegraph} alt="Graphone" />
+                        <ColorBlue></ColorBlue>
+                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
                         </BackGroundImg>
                         <Plus>+20%</Plus>
                     </StaticList>
@@ -99,27 +103,39 @@ export default function Dashboard() {
                         <UpArrow>
                             <UpImage src={uper} alt="uparrow" />
                         </UpArrow>
-                        <Incom>Total income $235</Incom>
-                        <ColorGreen></ColorGreen>
+                        <Totel>  
+                        <Incom>Total income</Incom>
+                        <Price> $235</Price>
+                        </Totel>
                         <BackGroundImg>
-                            <GraphImg src={linegraph} alt="Graphone" />
+                        <ColorGreen></ColorGreen>
+                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
                         </BackGroundImg>
-                        <PlusT>+8%</PlusT>
+                        <PlusT>+08%</PlusT>
                     </StaticList>
                     <StaticList>
                         <UpArrow>
                             <UpImage src={down} alt="uparrow" />
                         </UpArrow>
-                        <Incom>Total income $235</Incom>
-                        <ColorRed></ColorRed>
+                        <Totel>  
+                        <Incom>Total income</Incom>
+                        <Price> $235</Price>
+                        </Totel>                       
                         <BackGroundImg>
-                            <GraphImg src={linegraph} alt="Graphone" />
+                        <ColorRed></ColorRed>
+                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
                         </BackGroundImg>
-                        <PlusTo>-18%</PlusTo>
+                        <PlusTo>-08%</PlusTo>
                     </StaticList>
                 </StaticItems>
             </StatiStics>
+            {/* StatiStics section End here */}
       </LeftSection>
+      {/* left section end here  */}
+      {/* Right section start here  */}
+      <RightSection>
+
+      </RightSection>
     </DashboardSection>
   );
 }
@@ -228,21 +244,95 @@ const Summersec = styled.h4`
 font-size: 12px;
 font-weight: 400;
 `;
+// Saving section End here
 // statistic section
-const StatiStics = styled.section``;
-const TopContainer = styled.div``;
-const HeadingStatic = styled.h2``;
+const StatiStics = styled.section`
+padding: 15px;
+box-shadow: rgb(161 161 161) 1px 1px 2px 0px;
+border-radius: 6px;
+margin-top: 15px;
+`;
+const TopContainer = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+const HeadingStatic = styled.h2`
+padding: 0 0 20px 0px;
+`;
 const Select = styled.select``;
-const StaticItems = styled.ul``;
-const StaticList = styled.li``;
-const UpArrow = styled.div``;
-const UpImage = styled.img``;
-const Incom = styled.p``;
-const ColorBlue = styled.div``;
-const ColorGreen = styled.div``;
-const ColorRed = styled.div``;
-const BackGroundImg = styled.div``;
-const GraphImg = styled.img``;
-const PlusTo = styled.h3``;
-const PlusT = styled.h3``;
-const Plus = styled.h3``;
+const StaticItems = styled.ul`
+
+`;
+const StaticList = styled.li`
+display: flex;
+justify-content: space-between;
+padding: 0px 0 10px;
+`;
+const UpArrow = styled.div`
+width: 55px;
+background: #000;
+border-radius: 5px ;
+`;
+const UpImage = styled.img`
+filter: invert();
+width: 100%;
+display: block;
+padding: 18px;
+`;
+const Totel = styled.div`
+padding: 0 10px;
+`;
+const Incom = styled.small`
+font-weight: 300;
+color:gray ;
+`;
+const Price = styled.p`
+font-size: 18px;
+`;
+const BackGroundImg = styled.div`
+width: 54%;
+padding: 17px 0;
+
+`;
+const ColorBlue = styled.div`
+background-color:  #98bde5;
+    width: 120px;
+    padding: 10px 0px;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 0.8s;
+      cursor: pointer;
+    }
+`;
+const ColorGreen = styled.div`
+    padding: 10px 0px;
+    background-color: #98dbe5;
+    width: 150px;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 0.8s;
+      cursor: pointer;
+    }
+`;
+const ColorRed = styled.div`
+ background-color: #fec0a7;
+    width: 100px;
+    padding: 10px 0px;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 0.8s;
+      cursor: pointer;
+    }
+`;
+const PlusTo = styled.h3`
+width: 15%;
+padding: 15px;
+`;
+const PlusT = styled.h3`
+width: 15%;
+padding: 15px;
+`;
+const Plus = styled.h3`
+width: 15%;
+padding: 15px;
+`;
