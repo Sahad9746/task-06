@@ -146,7 +146,7 @@ const DashboardSection = styled.div`
 `;
 const LeftSection = styled.section`
   width: 50%;
-  background: #e0e0e0;
+  /* background: #e0e0e0; */
   padding: 10px;
 `;
 const CardSection = styled.div``;
