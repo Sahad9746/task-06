@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import suryan from "../Assets/sun.svg"
+import suryan from "../Assets/sun.svg";
 import fire from "../Assets/fire.svg";
 import game from "../Assets/gaming.svg";
 import { statistic } from "antd/es/theme/internal";
-import uper from "../Assets/Property 1=up-arrow.svg"
-import linegraph from "../Assets/graph1.png"
-import down from "../Assets/down.svg"
+import uper from "../Assets/Property 1=up-arrow.svg";
+import linegraph from "../Assets/graph1.png";
+import down from "../Assets/down.svg";
+import Search from "antd/es/transfer/search";
+import lens from "../Assets/len.svg";
+import grahp from "../Assets/graph.png"
 
 export default function Dashboard() {
   return (
@@ -75,66 +78,88 @@ export default function Dashboard() {
         {/* Saving ssection end here */}
         {/* Statistics section start here */}
         <StatiStics>
-                <TopContainer>
-                    <HeadingStatic>Statistics</HeadingStatic>
-                    <Select>
-                        <option>March 2022</option>
-                        <option>April 2022</option>
-                        <option>May 2022</option>
-                        <option>June 2022</option>
-                    </Select>
-                </TopContainer>
-                <StaticItems>
-                    <StaticList>
-                        <UpArrow>
-                            <UpImage src={uper} alt="uparrow" />
-                        </UpArrow>
-                        <Totel>  
-                        <Incom>Total income</Incom>
-                        <Price> $235</Price>
-                        </Totel>
-                        <BackGroundImg>
-                        <ColorBlue></ColorBlue>
-                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
-                        </BackGroundImg>
-                        <Plus>+20%</Plus>
-                    </StaticList>
-                    <StaticList>
-                        <UpArrow>
-                            <UpImage src={uper} alt="uparrow" />
-                        </UpArrow>
-                        <Totel>  
-                        <Incom>Total income</Incom>
-                        <Price> $235</Price>
-                        </Totel>
-                        <BackGroundImg>
-                        <ColorGreen></ColorGreen>
-                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
-                        </BackGroundImg>
-                        <PlusT>+08%</PlusT>
-                    </StaticList>
-                    <StaticList>
-                        <UpArrow>
-                            <UpImage src={down} alt="uparrow" />
-                        </UpArrow>
-                        <Totel>  
-                        <Incom>Total income</Incom>
-                        <Price> $235</Price>
-                        </Totel>                       
-                        <BackGroundImg>
-                        <ColorRed></ColorRed>
-                            {/* <GraphImg src={linegraph} alt="Graphone" /> */}
-                        </BackGroundImg>
-                        <PlusTo>-08%</PlusTo>
-                    </StaticList>
-                </StaticItems>
-            </StatiStics>
-            {/* StatiStics section End here */}
+          <TopContainer>
+            <HeadingStatic>Statistics</HeadingStatic>
+            <Select>
+              <option>March 2022</option>
+              <option>April 2022</option>
+              <option>May 2022</option>
+              <option>June 2022</option>
+            </Select>
+          </TopContainer>
+          <StaticItems>
+            <StaticList>
+              <UpArrow>
+                <UpImage src={uper} alt="uparrow" />
+              </UpArrow>
+              <Totel>
+                <Incom>Total income</Incom>
+                <Price> $235</Price>
+              </Totel>
+              <BackGroundImg>
+                <ColorBlue></ColorBlue>
+                {/* <GraphImg src={linegraph} alt="Graphone" /> */}
+              </BackGroundImg>
+              <Plus>+20%</Plus>
+            </StaticList>
+            <StaticList>
+              <UpArrow>
+                <UpImage src={uper} alt="uparrow" />
+              </UpArrow>
+              <Totel>
+                <Incom>Total income</Incom>
+                <Price> $235</Price>
+              </Totel>
+              <BackGroundImg>
+                <ColorGreen></ColorGreen>
+                {/* <GraphImg src={linegraph} alt="Graphone" /> */}
+              </BackGroundImg>
+              <PlusT>+08%</PlusT>
+            </StaticList>
+            <StaticList>
+              <UpArrow>
+                <UpImage src={down} alt="uparrow" />
+              </UpArrow>
+              <Totel>
+                <Incom>Total income</Incom>
+                <Price> $235</Price>
+              </Totel>
+              <BackGroundImg>
+                <ColorRed></ColorRed>
+                {/* <GraphImg src={linegraph} alt="Graphone" /> */}
+              </BackGroundImg>
+              <PlusTo>-08%</PlusTo>
+            </StaticList>
+          </StaticItems>
+        </StatiStics>
+        {/* StatiStics section End here */}
       </LeftSection>
       {/* left section end here  */}
       {/* Right section start here  */}
       <RightSection>
-
+        <TopSearch>
+          <SearchLen to="/Ooops">
+            <LensImg src={lens} alt="lens" />
+          </SearchLen>
+          <SearchBar>
+            <SearchPut
+              type="text"
+              placeholder="Search document,keywords etc..."
+            />
+          </SearchBar>
+        </TopSearch>
+        <GraphSection>
+          <AnelyticDiv>
+            <Anelytic>Analytics</Anelytic>
+            <BlackDot></BlackDot>
+            <InCom>Income</InCom>
+            <GreenDot></GreenDot>
+            <Savi>Saving</Savi>
+          </AnelyticDiv>
+          <SecDivImg>
+            <SecDivImage src={grahp} alt="Graph" />
+          </SecDivImg>
+        </GraphSection>
       </RightSection>
     </DashboardSection>
   );
@@ -142,7 +167,8 @@ export default function Dashboard() {
 const DashboardSection = styled.div`
   width: 74%;
   background-color: #ffff;
-  
+  display: flex;
+  /* justify-content: space-between; */
 `;
 const LeftSection = styled.section`
   width: 50%;
@@ -153,7 +179,6 @@ const CardSection = styled.div``;
 const Line = styled.hr`
   border-left: 1px solid #fff;
   height: 20px;
-  
 `;
 const ColdHeading = styled.h1``;
 const SubList = styled.ul`
@@ -181,158 +206,224 @@ const Dollor = styled.p`
   color: #fff;
   font-size: large;
 `;
-const SecondContainer = styled.section` 
-box-shadow: 1px 1px 2px 0px rgba(161,161,161,1);
-border-radius: 6px;
-margin-top: 35px;
-padding: 15px;
-
+const SecondContainer = styled.section`
+  box-shadow: 1px 1px 2px 0px rgba(161, 161, 161, 1);
+  border-radius: 6px;
+  margin-top: 35px;
+  padding: 15px;
 `;
-const SecondDivision = styled.div` 
-`;
+const SecondDivision = styled.div``;
 const FourthDivision = styled.div`
-display: flex;
-justify-content: space-between;
-padding: 0 0 20px ;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px;
 `;
 const Lefthead = styled.h3`
-font-size: 22px;
-font-weight: 600;
+  font-size: 22px;
+  font-weight: 600;
 `;
 const Righthead = styled.h3`
-font-size: 15px;
-font-weight: 300;
+  font-size: 15px;
+  font-weight: 300;
 `;
-const FifthDivision = styled.div`
-`;
+const FifthDivision = styled.div``;
 const BoxList = styled.ul`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 const BoxListItem = styled.li`
-    background: #fec0a7 ;
-    padding: 15px;
-    width: 30%;
-    border-radius: 7px;
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.8s;
-      cursor: pointer;
-    }
-    &:nth-child(2) {
-      background-color: #98bde5;
-    }
-    &:last-child  {
-      background-color: #98dbe5;
-    }
-
+  background: #fec0a7;
+  padding: 15px;
+  width: 30%;
+  border-radius: 7px;
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+    cursor: pointer;
+  }
+  &:nth-child(2) {
+    background-color: #98bde5;
+  }
+  &:last-child {
+    background-color: #98dbe5;
+  }
 `;
 const Imagecon = styled.div`
-width: 30px;
-padding-bottom:25px ;
+  width: 30px;
+  padding-bottom: 25px;
 `;
 const SunImg = styled.img`
-width: 100%;
-display: block;
+  width: 100%;
+  display: block;
 `;
 const MonyExe = styled.p`
-font-size: 26px;
-font-weight: 600;
-padding-bottom: 5px;
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 5px;
 `;
 const Summersec = styled.h4`
-font-size: 12px;
-font-weight: 400;
+  font-size: 12px;
+  font-weight: 400;
 `;
 // Saving section End here
 // statistic section
 const StatiStics = styled.section`
-padding: 15px;
-box-shadow: rgb(161 161 161) 1px 1px 2px 0px;
-border-radius: 6px;
-margin-top: 15px;
+  padding: 15px;
+  box-shadow: rgb(161 161 161) 1px 1px 2px 0px;
+  border-radius: 6px;
+  margin-top: 15px;
 `;
 const TopContainer = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 const HeadingStatic = styled.h2`
-padding: 0 0 20px 0px;
+  padding: 0 0 20px 0px;
 `;
-const Select = styled.select``;
-const StaticItems = styled.ul`
-
+const Select = styled.select`
+  border: 1px solid #747474;
+  padding: 2px 14px;
+  border-radius: 23px;
+  color: #747474;
+  height: 33px;
 `;
+const StaticItems = styled.ul``;
 const StaticList = styled.li`
-display: flex;
-justify-content: space-between;
-padding: 0px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0 10px;
 `;
 const UpArrow = styled.div`
-width: 55px;
-background: #000;
-border-radius: 5px ;
+  width: 55px;
+  background: #000;
+  border-radius: 5px;
 `;
 const UpImage = styled.img`
-filter: invert();
-width: 100%;
-display: block;
-padding: 18px;
+  filter: invert();
+  width: 100%;
+  display: block;
+  padding: 18px;
 `;
 const Totel = styled.div`
-padding: 0 10px;
+  padding: 0 10px;
 `;
 const Incom = styled.small`
-font-weight: 300;
-color:gray ;
+  font-weight: 300;
+  color: gray;
 `;
 const Price = styled.p`
-font-size: 18px;
+  font-size: 18px;
 `;
 const BackGroundImg = styled.div`
-width: 54%;
-padding: 17px 0;
-
+  width: 54%;
+  padding: 17px 0;
 `;
 const ColorBlue = styled.div`
-background-color:  #98bde5;
-    width: 120px;
-    padding: 10px 0px;
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.8s;
-      cursor: pointer;
-    }
+  background-color: #98bde5;
+  width: 120px;
+  padding: 10px 0px;
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+    cursor: pointer;
+  }
 `;
 const ColorGreen = styled.div`
-    padding: 10px 0px;
-    background-color: #98dbe5;
-    width: 150px;
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.8s;
-      cursor: pointer;
-    }
+  padding: 10px 0px;
+  background-color: #98dbe5;
+  width: 150px;
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+    cursor: pointer;
+  }
 `;
 const ColorRed = styled.div`
- background-color: #fec0a7;
-    width: 100px;
-    padding: 10px 0px;
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 0.8s;
-      cursor: pointer;
-    }
+  background-color: #fec0a7;
+  width: 100px;
+  padding: 10px 0px;
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+    cursor: pointer;
+  }
 `;
 const PlusTo = styled.h3`
-width: 15%;
-padding: 15px;
+  width: 15%;
+  padding: 15px;
 `;
 const PlusT = styled.h3`
-width: 15%;
-padding: 15px;
+  width: 15%;
+  padding: 15px;
 `;
 const Plus = styled.h3`
-width: 15%;
-padding: 15px;
+  width: 15%;
+  padding: 15px;
 `;
+// StatiStics end
+// Right section starting
+const RightSection = styled.section`
+  width: 50%;
+`;
+const TopSearch = styled.div`
+  width: 60%;
+  display: flex;
+  padding: 30px 40px 10px;
+`;
+const SearchBar = styled.div``;
+const SearchPut = styled.input`
+  padding: 0 10px;
+  ::placeholder {
+  }
+`;
+const SearchLen = styled.div``;
+const LensImg = styled.img`
+  width: 100%;
+  display: block;
+`;
+// Scearch section end
+
+// Graph Section
+
+const GraphSection = styled.section`
+padding: 15px;
+ box-shadow: rgb(161 161 161) 0px 1px 1px 0px;
+  border-radius: 6px;
+`;
+const AnelyticDiv = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+width: 90%;
+margin: 0 auto;
+`;
+const Anelytic = styled.h2`
+width: 75%;
+font-weight: 600;
+`;
+const BlackDot = styled.div`
+width: 10px;
+height: 10px;
+background: #000;
+`;
+const InCom = styled.small`
+color: gray;
+`;
+const GreenDot = styled.div `
+width: 10px;
+height: 10px;
+background: green;
+`;
+const Savi = styled.small `
+color: gray;
+`;
+const SecDivImg = styled.div `
+  cursor: pointer;
+ padding: 0px 30px ;
+`;
+const SecDivImage = styled.img `
+width: 100%;
+display: block;
+`;
+
