@@ -12,70 +12,6 @@ import dot from "../../Assets/dot.svg"
 function SideBar() {
   return (
     <>
-     {/* <Maincontainer>
-      <Header>
-
-      </Header>
-      <NavContent>
-        <NavItems>
-            <Item
-              // className={({ isActive }) => (isActive ? "active" : "")}
-              to="/"
-            >
-              Dashboard
-            </Item>
-            <ItemImage to="/">
-              <Img  />
-            </ItemImage>
-        </NavItems>
-        <NavItems>
-            <Item
-              // className={({ isActive }) => (isActive ? "active" : "")}
-              to="/mycards"
-            >
-              Mycards
-            </Item>
-            <ItemImage to="/">
-              <Img />
-            </ItemImage>
-        </NavItems>
-        <NavItems>
-            <Item
-              // className={({ isActive }) => (isActive ? "active" : "")}
-              to="/transaction"
-            >
-              Transaction
-            </Item>
-            <ItemImage to="/">
-              <Img  />
-            </ItemImage>
-        </NavItems>
-        <NavItems>
-            <Item
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/saving"
-            >
-              Saving
-            </Item>
-            <ItemImage to="/">
-              <Img  />
-            </ItemImage>
-        </NavItems>
-        <NavItems>
-            <Item
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/settings"
-            >
-              Settings
-            </Item>
-            <ItemImage to="/">
-              <Img/>
-            </ItemImage>
-        </NavItems>
-
-      </NavContent>
-
-     </Maincontainer> */}
      <MainContainer>
       <DivTop>
         <DivLogo>
@@ -193,15 +129,15 @@ const Ul =styled.ul``;
 const Li =styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   :last-child {
     margin-bottom: 0;
   }
 `
 const Item = styled(NavLink)`
-  font-size: 25px;
+  font-size: 18px;
   color: gray;
-  font-weight: 550;
+
 `
 const LeftImage = styled.div`
   margin-right: 18px;

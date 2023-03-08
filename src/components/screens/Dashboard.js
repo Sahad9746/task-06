@@ -182,7 +182,7 @@ export default function Dashboard() {
                 <Month>Monthly Groceries</Month>
                 <Times>3Apr 2022 at 3.15 pm</Times>
               </NextD>
-              <Plusw>+$220</Plusw>
+              <Plusw>+$2,20</Plusw>
               <DottedM>
                 <DottedIM src={dot} alt="Dots"/>
               </DottedM>
@@ -195,7 +195,7 @@ export default function Dashboard() {
                 <Month>Zabka Cashback</Month>
                 <Times>3Apr 2022 at 3.15 pm</Times>
               </NextD>
-              <PlusT>+$220</PlusT>
+              <Plust>+$220</Plust>
               <DottedM>
                 <DottedIM src={dot} alt ="Dots"/>
               </DottedM>
@@ -262,7 +262,7 @@ const Dollor = styled.p`
   font-size: large;
 `;
 const SecondContainer = styled.section`
-  box-shadow: 1px 1px 2px 0px rgba(161, 161, 161, 1);
+  box-shadow: 0px 0px 1px 0px rgba(161, 161, 161, 1);
   border-radius: 6px;
   margin-top: 35px;
   padding: 15px;
@@ -324,7 +324,7 @@ const Summersec = styled.h4`
 // statistic section
 const StatiStics = styled.section`
   padding: 15px;
-  box-shadow: rgb(161 161 161) 1px 1px 2px 0px;
+  box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
   border-radius: 6px;
   margin-top: 15px;
 `;
@@ -420,11 +420,12 @@ const Plus = styled.h3`
 // Right section starting
 const RightSection = styled.section`
   width: 50%;
+  padding: 10px;
 `;
 const TopSearch = styled.div`
   width: 60%;
   display: flex;
-  padding: 30px 40px 10px;
+ padding-top: 10px;
 `;
 const SearchBar = styled.div``;
 const SearchPut = styled.input`
@@ -442,8 +443,9 @@ const LensImg = styled.img`
 // Graph Section
 
 const GraphSection = styled.section`
+margin-top: 22px;
   padding: 15px;
-  box-shadow: rgb(161 161 161) 0px 1px 1px 0px;
+  box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
   border-radius: 6px;
 `;
 const AnelyticDiv = styled.div`
@@ -476,7 +478,7 @@ const Savi = styled.small`
 `;
 const SecDivImg = styled.div`
   cursor: pointer;
-  padding: 0px 30px;
+  padding: 5px 30px;
 `;
 const SecDivImage = styled.img`
   width: 100%;
@@ -487,6 +489,9 @@ const SecDivImage = styled.img`
 // Transaction started
 const TarnsactionSection = styled.section`
 padding: 15px;
+    box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
+    border-radius: 6px;
+    margin-top: 15px;
 `;
 const TopContainerTar = styled.div`
 display: flex;
@@ -494,6 +499,7 @@ justify-content: space-between;
 `;
 const HeadingTra = styled.h2`
 font-weight: 600;
+padding: 0px 0px 20px;
 `;
 const SeLect = styled.select`
  border: 1px solid #747474;
@@ -508,16 +514,55 @@ const TransItems = styled.ul`
 const TransList = styled.li`
 display: flex;
 justify-content: space-between;
+align-items: center;
+padding-bottom: 10px;
 `;
-const Up = styled.div``;
-const Upimage = styled.div``;
-const NextD = styled.div``;
-const Month = styled.h3``;
-const Times = styled.small``;
-const PlusW = styled.span``;
-const Plusw = styled.span``;
+const Up = styled.div`
+  width: 55px;
+  background: #000;
+  border-radius: 5px;
+`;
+const Upimage = styled.img`
+width: 100%;
+display: block;
+filter: invert();
+padding: 18px;
+`;
+const NextD = styled.div`
+width: 40%;
+`;
+const Month = styled.h3`
+font-size: 18px;
+font-weight: 600;
+`;
+const Times = styled.small`
+font-size: 12px;
+color: gray;
+
+`;
+const PlusW = styled.p`
+    width: 15%;
+    padding: 15px;
+    color: #98ff98;
+
+`;
+const Plust = styled.p`
+  width: 15%;
+    padding: 15px;
+    color: red;
+    font-weight: 500;
+`;
+const Plusw = styled.p`
+    width: 15%;
+    padding: 15px;
+    color: #98ff98;
+
+`;
 const DottedM = styled.div``;
-const DottedIM = styled.img``;
+const DottedIM = styled.img`
+width: 100%;
+display: block;
+`;
 
 
 
