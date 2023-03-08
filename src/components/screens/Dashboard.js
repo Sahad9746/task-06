@@ -9,7 +9,8 @@ import linegraph from "../Assets/graph1.png";
 import down from "../Assets/down.svg";
 import Search from "antd/es/transfer/search";
 import lens from "../Assets/len.svg";
-import grahp from "../Assets/graph.png"
+import grahp from "../Assets/graph.png";
+import dot from "../Assets/dot.svg"
 
 export default function Dashboard() {
   return (
@@ -160,6 +161,60 @@ export default function Dashboard() {
             <SecDivImage src={grahp} alt="Graph" />
           </SecDivImg>
         </GraphSection>
+        {/* Graph section end */}
+        {/* Transaction section starting */}
+        <TarnsactionSection>
+          <TopContainerTar>
+            <HeadingTra>Transaction</HeadingTra>
+            <SeLect>
+              <option>March 2022</option>
+              <option>April 2022</option>
+              <option>May 2022</option>
+              <option>June 2022</option>
+            </SeLect>
+          </TopContainerTar>
+          <TransItems>
+            <TransList>
+              <Up>
+                <Upimage src={down} alt="downimg" />
+              </Up>
+              <NextD>
+                <Month>Monthly Groceries</Month>
+                <Times>3Apr 2022 at 3.15 pm</Times>
+              </NextD>
+              <Plusw>+$220</Plusw>
+              <DottedM>
+                <DottedIM src={dot} alt="Dots"/>
+              </DottedM>
+            </TransList>
+            <TransList>
+              <Up>
+                <Upimage src={uper} alt="uparrow" />
+              </Up>
+              <NextD>
+                <Month>Zabka Cashback</Month>
+                <Times>3Apr 2022 at 3.15 pm</Times>
+              </NextD>
+              <PlusT>+$220</PlusT>
+              <DottedM>
+                <DottedIM src={dot} alt ="Dots"/>
+              </DottedM>
+            </TransList>
+            <TransList>
+              <UpArrow>
+                <Upimage src={uper} alt="uparrow" />
+              </UpArrow>
+              <NextD>
+                <Month>Transfer to card</Month>
+                <Times>3Apr 2022 at 3.15 pm</Times>
+              </NextD>
+              <PlusW>+$80</PlusW>
+              <DottedM>
+                <DottedIM src={dot}  alt= "Dots"/>
+              </DottedM>
+            </TransList>
+          </TransItems>
+        </TarnsactionSection>
       </RightSection>
     </DashboardSection>
   );
@@ -361,6 +416,7 @@ const Plus = styled.h3`
   padding: 15px;
 `;
 // StatiStics end
+
 // Right section starting
 const RightSection = styled.section`
   width: 50%;
@@ -386,44 +442,84 @@ const LensImg = styled.img`
 // Graph Section
 
 const GraphSection = styled.section`
-padding: 15px;
- box-shadow: rgb(161 161 161) 0px 1px 1px 0px;
+  padding: 15px;
+  box-shadow: rgb(161 161 161) 0px 1px 1px 0px;
   border-radius: 6px;
 `;
 const AnelyticDiv = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 0;
-width: 90%;
-margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
 `;
 const Anelytic = styled.h2`
-width: 75%;
-font-weight: 600;
+  width: 75%;
+  font-weight: 600;
 `;
 const BlackDot = styled.div`
-width: 10px;
-height: 10px;
-background: #000;
+  width: 10px;
+  height: 10px;
+  background: #000;
 `;
 const InCom = styled.small`
-color: gray;
+  color: gray;
 `;
-const GreenDot = styled.div `
-width: 10px;
-height: 10px;
-background: green;
+const GreenDot = styled.div`
+  width: 10px;
+  height: 10px;
+  background: green;
 `;
-const Savi = styled.small `
-color: gray;
+const Savi = styled.small`
+  color: gray;
 `;
-const SecDivImg = styled.div `
+const SecDivImg = styled.div`
   cursor: pointer;
- padding: 0px 30px ;
+  padding: 0px 30px;
 `;
-const SecDivImage = styled.img `
-width: 100%;
-display: block;
+const SecDivImage = styled.img`
+  width: 100%;
+  display: block;
 `;
+// Graph section is compeleted
+
+// Transaction started
+const TarnsactionSection = styled.section`
+padding: 15px;
+`;
+const TopContainerTar = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+const HeadingTra = styled.h2`
+font-weight: 600;
+`;
+const SeLect = styled.select`
+ border: 1px solid #747474;
+  padding: 2px 14px;
+  border-radius: 23px;
+  color: #747474;
+  height: 33px;
+`;
+const TransItems = styled.ul`
+
+`;
+const TransList = styled.li`
+display: flex;
+justify-content: space-between;
+`;
+const Up = styled.div``;
+const Upimage = styled.div``;
+const NextD = styled.div``;
+const Month = styled.h3``;
+const Times = styled.small``;
+const PlusW = styled.span``;
+const Plusw = styled.span``;
+const DottedM = styled.div``;
+const DottedIM = styled.img``;
+
+
+
+
 
