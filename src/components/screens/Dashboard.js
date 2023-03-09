@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import suryan from "../Assets/sun.svg";
 import fire from "../Assets/fire.svg";
@@ -10,14 +11,17 @@ import down from "../Assets/down.svg";
 import Search from "antd/es/transfer/search";
 import lens from "../Assets/len.svg";
 import grahp from "../Assets/graph.png";
-import dot from "../Assets/dot.svg"
+import dot from "../Assets/dot.svg";
+import Modal from "./modals/Modal"
 
 export default function Dashboard() {
+  const [showModal, setShowModal] = useState(false)
+  
   return (
     <DashboardSection>
       <LeftSection>
         <CardSection>
-          <ColdHeading>DashboardSection</ColdHeading>
+          <ColdHeading>Dashboard</ColdHeading>
           <Static>
             <SubList>
               <SubListItem>
@@ -47,7 +51,20 @@ export default function Dashboard() {
           <SecondDivision>
             <FourthDivision>
               <Lefthead>Saving</Lefthead>
-              <Righthead>Total 5 Walets</Righthead>
+              <div>
+                <Righthead onClick={() => setShowModal(true)}>
+                Total 5 Walets
+                </Righthead>
+                {showModal && (
+                <Modal
+                close={setShowModal}
+                />
+                )}
+                {/* <button onClick={() => setShowModal(false)}>close</button> */}
+                {/* {showModal && (
+                // <button onClick={() => setShowModal}>close</button> )} */}
+              </div>
+              
             </FourthDivision>
             <FifthDivision>
               <BoxList>
@@ -184,7 +201,7 @@ export default function Dashboard() {
               </NextD>
               <Plusw>+$2,20</Plusw>
               <DottedM>
-                <DottedIM src={dot} alt="Dots"/>
+                <DottedIM src={dot} alt="Dots" />
               </DottedM>
             </TransList>
             <TransList>
@@ -197,7 +214,7 @@ export default function Dashboard() {
               </NextD>
               <Plust>+$220</Plust>
               <DottedM>
-                <DottedIM src={dot} alt ="Dots"/>
+                <DottedIM src={dot} alt="Dots" />
               </DottedM>
             </TransList>
             <TransList>
@@ -210,7 +227,7 @@ export default function Dashboard() {
               </NextD>
               <PlusW>+$80</PlusW>
               <DottedM>
-                <DottedIM src={dot}  alt= "Dots"/>
+                <DottedIM src={dot} alt="Dots" />
               </DottedM>
             </TransList>
           </TransItems>
@@ -223,11 +240,9 @@ const DashboardSection = styled.div`
   width: 74%;
   background-color: #ffff;
   display: flex;
-  /* justify-content: space-between; */
 `;
 const LeftSection = styled.section`
   width: 50%;
-  /* background: #e0e0e0; */
   padding: 10px;
 `;
 const CardSection = styled.div``;
@@ -235,7 +250,10 @@ const Line = styled.hr`
   border-left: 1px solid #fff;
   height: 20px;
 `;
-const ColdHeading = styled.h1``;
+const ColdHeading = styled.h1`
+  font-weight: 700;
+  font-size: 25px;
+`;
 const SubList = styled.ul`
   margin-top: 20px;
   background: #000;
@@ -277,9 +295,10 @@ const Lefthead = styled.h3`
   font-size: 22px;
   font-weight: 600;
 `;
-const Righthead = styled.h3`
+const Righthead = styled.button`
   font-size: 15px;
   font-weight: 300;
+  cursor:pointer;
 `;
 const FifthDivision = styled.div``;
 const BoxList = styled.ul`
@@ -425,7 +444,7 @@ const RightSection = styled.section`
 const TopSearch = styled.div`
   width: 60%;
   display: flex;
- padding-top: 10px;
+  padding-top: 10px;
 `;
 const SearchBar = styled.div``;
 const SearchPut = styled.input`
@@ -443,7 +462,7 @@ const LensImg = styled.img`
 // Graph Section
 
 const GraphSection = styled.section`
-margin-top: 22px;
+  margin-top: 22px;
   padding: 15px;
   box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
   border-radius: 6px;
@@ -488,34 +507,32 @@ const SecDivImage = styled.img`
 
 // Transaction started
 const TarnsactionSection = styled.section`
-padding: 15px;
-    box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
-    border-radius: 6px;
-    margin-top: 15px;
+  padding: 15px;
+  box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
+  border-radius: 6px;
+  margin-top: 15px;
 `;
 const TopContainerTar = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 const HeadingTra = styled.h2`
-font-weight: 600;
-padding: 0px 0px 20px;
+  font-weight: 600;
+  padding: 0px 0px 20px;
 `;
 const SeLect = styled.select`
- border: 1px solid #747474;
+  border: 1px solid #747474;
   padding: 2px 14px;
   border-radius: 23px;
   color: #747474;
   height: 33px;
 `;
-const TransItems = styled.ul`
-
-`;
+const TransItems = styled.ul``;
 const TransList = styled.li`
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
 `;
 const Up = styled.div`
   width: 55px;
@@ -523,48 +540,42 @@ const Up = styled.div`
   border-radius: 5px;
 `;
 const Upimage = styled.img`
-width: 100%;
-display: block;
-filter: invert();
-padding: 18px;
+  width: 100%;
+  display: block;
+  filter: invert();
+  padding: 18px;
 `;
 const NextD = styled.div`
-width: 40%;
+  width: 40%;
 `;
 const Month = styled.h3`
-font-size: 18px;
-font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 `;
 const Times = styled.small`
-font-size: 12px;
-color: gray;
-
+  font-size: 12px;
+  color: gray;
 `;
 const PlusW = styled.p`
-    width: 15%;
-    padding: 15px;
-    color: #98ff98;
-
+  width: 15%;
+  padding: 15px;
+  color: #98ff98;
+  font-weight: 500;
 `;
 const Plust = styled.p`
   width: 15%;
-    padding: 15px;
-    color: red;
-    font-weight: 500;
+  padding: 15px;
+  color: red;
+  font-weight: 500;
 `;
 const Plusw = styled.p`
-    width: 15%;
-    padding: 15px;
-    color: #98ff98;
-
+  width: 15%;
+  padding: 15px;
+  color: #98ff98;
+  font-weight: 500;
 `;
 const DottedM = styled.div``;
 const DottedIM = styled.img`
-width: 100%;
-display: block;
+  width: 100%;
+  display: block;
 `;
-
-
-
-
-
