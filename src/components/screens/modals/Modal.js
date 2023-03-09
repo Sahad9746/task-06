@@ -9,7 +9,7 @@ import { Button } from 'antd';
 function Modal({close}) {
     
   return (
-    <Modal>
+    <ModaL>
         <FifthDivision>
               <BoxList>
                 <BoxListItem>
@@ -48,28 +48,43 @@ function Modal({close}) {
                   <Summersec>Summer trip</Summersec>
                 </BoxListItem>
               </BoxList>
-            </FifthDivision>
             <ButtonClose onClick={() => close(false)}>Close Here!!!</ButtonClose>
-    </Modal>
+            </FifthDivision>
+    </ModaL>
   )
 }
-const Modal = styled.section`
+const ModaL = styled.section`
 position: fixed;
 top:0 ;
 left: 0;
-
-
+background-color: rgba(0,0,0, 0.4);
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 `;
 const ButtonClose  = styled.button`
     cursor:pointer;
     margin-top: 40px;
-    border: 2px solid #000;
-    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    margin: 0 auto;
 `;
-const FifthDivision = styled.div``;
+const FifthDivision = styled.div`
+background: #fff;
+min-width: 600px;
+border-radius: 0.5rem;
+box-shadow: 0 1px 10px #999;
+padding: 15px;
+`;
+
 const BoxList = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 const BoxListItem = styled.li`
   background: #fec0a7;
@@ -84,6 +99,9 @@ const BoxListItem = styled.li`
   }
   &:nth-child(2) {
     background-color: #98bde5;
+  }
+  &:nth-child(3){
+    margin-right: 0;
   }
   &:last-child {
     background-color: #98dbe5;
