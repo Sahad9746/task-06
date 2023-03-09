@@ -11,6 +11,7 @@ function Modal({close}) {
   return (
     <ModaL>
         <FifthDivision>
+            <Savi>Saving</Savi>
               <BoxList>
                 <BoxListItem>
                   <Imagecon>
@@ -80,7 +81,11 @@ border-radius: 0.5rem;
 box-shadow: 0 1px 10px #999;
 padding: 15px;
 `;
-
+const Savi = styled.h2`
+font-size: 25px;
+font-weight: 600;
+padding: 15px 0 ;
+`;
 const BoxList = styled.ul`
   display: flex;
   flex-wrap: wrap;

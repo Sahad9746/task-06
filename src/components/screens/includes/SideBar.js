@@ -103,6 +103,10 @@ const MainContainer = styled.section`
   height: 100vh;
   padding: 45px 50px 55px 70px;
   background: #f6f6f6;
+  /* transform: translateX(50%); */
+  @media all and (max-width: 1080px) {
+  position: absolute;
+  }
 `;
 const DivTop =styled.div`
   padding: 0 0 80px 0;
@@ -146,6 +150,7 @@ const Imageleft = styled.img`
   width: 100%;
   display: block;
   filter: invert(56%) sepia(0%) saturate(57%) hue-rotate(135deg) brightness(89%) contrast(86%);
+  
 `;
 const H2 = styled.h2`
   font-size: 25px;

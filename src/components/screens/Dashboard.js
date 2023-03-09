@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import Chart from "react-apexcharts";
 import styled from "styled-components";
 import suryan from "../Assets/sun.svg";
 import fire from "../Assets/fire.svg";
@@ -16,7 +16,26 @@ import Modal from "./modals/Modal"
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false)
-  
+  const [state, setState] = useState ({
+      options: {
+        chart: {
+          id: "basic-bar"
+        },
+        xaxis: {
+          categories: ["Mar30", "Mar31", "Apr01", "Apr02", "Apr03", "Apr04", "Apr05", "Apr06","Apr07"]
+        }
+      },
+      series: [
+        {
+          name: "series-1",
+          data: [1.0, 2.0, 1.0, 2.5, 1.5, 1.7, 3.5, 1.0]
+        },
+        {
+          name: "series-2",
+          data: [1.9, 1.0, 1.5, .8, 1.1, 1.9, 0.5, 2.0]
+        }
+      ]
+  })
   return (
     <DashboardSection>
       <LeftSection>
@@ -175,10 +194,18 @@ export default function Dashboard() {
             <Savi>Saving</Savi>
           </AnelyticDiv>
           <SecDivImg>
-            <SecDivImage src={grahp} alt="Graph" />
+            {/* <SecDivImage src={grahp} alt="Graph" /> */}
+            <Chart
+              options={state.options}
+              series={state.series}
+              type="line"
+              width="500"
+              height= "280"
+            />
           </SecDivImg>
         </GraphSection>
         {/* Graph section end */}
+
         {/* Transaction section starting */}
         <TarnsactionSection>
           <TopContainerTar>
@@ -234,7 +261,7 @@ export default function Dashboard() {
         </TarnsactionSection>
       </RightSection>
     </DashboardSection>
-  );
+  )
 }
 const DashboardSection = styled.div`
   width: 74%;
@@ -463,7 +490,7 @@ const LensImg = styled.img`
 
 const GraphSection = styled.section`
   margin-top: 22px;
-  padding: 15px;
+  padding: 3px;
   box-shadow: rgb(161 161 161) 0px 0px 1px 0px;
   border-radius: 6px;
 `;
@@ -496,13 +523,9 @@ const Savi = styled.small`
   color: gray;
 `;
 const SecDivImg = styled.div`
-  cursor: pointer;
-  padding: 5px 30px;
+
 `;
-const SecDivImage = styled.img`
-  width: 100%;
-  display: block;
-`;
+
 // Graph section is compeleted
 
 // Transaction started
