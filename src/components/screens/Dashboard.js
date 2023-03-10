@@ -271,6 +271,9 @@ const DashboardSection = styled.div`
 const LeftSection = styled.section`
   width: 50%;
   padding: 10px;
+  @media screen and (max-width: 980px){
+    width: 100%;
+  }
 `;
 const CardSection = styled.div``;
 const Line = styled.hr`
@@ -467,6 +470,9 @@ const Plus = styled.h3`
 const RightSection = styled.section`
   width: 50%;
   padding: 10px;
+  @media screen and (max-width: 980px){
+    width: 100%;
+  }
 `;
 const TopSearch = styled.div`
   width: 60%;

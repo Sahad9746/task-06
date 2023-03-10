@@ -56,6 +56,7 @@ function Modal({close}) {
 }
 const ModaL = styled.section`
 position: fixed;
+z-index: 99;
 top:0 ;
 left: 0;
 background-color: rgba(0,0,0, 0.4);
